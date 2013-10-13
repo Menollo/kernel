@@ -158,7 +158,8 @@
 				nvidia,enable-input = <0>;
 			};
 			gmi_a17_pb0 {
-				nvidia,pins = "gmi_a17_pb0";
+				nvidia,pins = "gmi_a17_pb0",
+						"gmi_a18_pb1";
 				nvidia,function = "uartd";
 				nvidia,pull = <0>;
 				nvidia,tristate = <1>;
