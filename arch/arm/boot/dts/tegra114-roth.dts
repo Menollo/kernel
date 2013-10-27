@@ -6,6 +6,10 @@
 	model = "NVIDIA SHIELD";
 	compatible = "nvidia,roth", "nvidia,dalmore", "nvidia,tegra114";
 
+	chosen {
+		bootargs = "console=ttyS0,115200n8 console=tty1 earlyprintk ignore_loglevel gpt fbcon=rotate:1 root=/dev/ram rootwait rw rdinit=/sbin/init initrd=0x82000000,0x400000";
+	};
+
 	firmware {
 		trusted-foundations {
 			compatible = "tlm,trusted-foundations";

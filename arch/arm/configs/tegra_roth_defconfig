@@ -270,7 +270,6 @@ CONFIG_CRYPTO_TWOFISH=y
 CONFIG_CRYPTO_DEV_TEGRA_AES=y
 CONFIG_CRC_CCITT=y
 CONFIG_ARM_APPENDED_DTB=y
-CONFIG_CMDLINE="console=ttyS0,115200n8 console=tty1 earlyprintk ignore_loglevel gpt fbcon=rotate:1 root=/dev/ram rootwait rw rdinit=/sbin/init initrd=0x82000000,0x400000"
 CONFIG_REGULATOR_BQ2419X=y
 CONFIG_GPIO_SYSFS=y
 CONFIG_FB=y
