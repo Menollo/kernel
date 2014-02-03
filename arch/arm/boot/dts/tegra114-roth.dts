@@ -7,7 +7,9 @@
 	compatible = "nvidia,roth", "nvidia,dalmore", "nvidia,tegra114";
 
 	chosen {
-		bootargs = "console=ttyS0,115200n8 console=tty1 earlyprintk ignore_loglevel gpt fbcon=rotate:1 initrd=0x82000000,0x800000";
+		bootargs = "console=ttyS0,115200n8 console=tty1 earlyprintk ignore_loglevel gpt fbcon=rotate:1";
+		linux,initrd-start = <0x82000000>;
+		linux,initrd-end = <0x82800000>;
 	};
 
 	firmware {
@@ -1049,7 +1051,6 @@
 			regulator-min-microvolt = <5000000>;
 			regulator-max-microvolt = <5000000>;
 			enable-active-high;
-			gpio = <&gpio TEGRA_GPIO(H, 2) GPIO_ACTIVE_HIGH>;
 			regulator-boot-on;
 		};
 
@@ -1113,6 +1114,9 @@
 
 		brightness-levels = <0 16 32 48 64 80 96 112 128 144 160 176 192 208 224 240 255>;
 		default-brightness-level = <10>;
+
+		power-supply = <&lcd_bl_en>;
+		enable-gpios = <&gpio TEGRA_GPIO(H, 2) GPIO_ACTIVE_HIGH>;
 	};
 
 	pwm: pwm {

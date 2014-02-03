@@ -6,8 +6,8 @@ presence by declaring a node compatible with "tlm,trusted-foundations"
 under the /firmware/ node
 
 Required properties:
-- compatible : "tlm,trusted-foundations"
-- tlm,version-major : major version number of Trusted Foundations firmware
+- compatible: "tlm,trusted-foundations"
+- tlm,version-major: major version number of Trusted Foundations firmware
 - tlm,version-minor: minor version number of Trusted Foundations firmware
 
 Example:
